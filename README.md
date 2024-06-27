@@ -6,6 +6,8 @@ This is a simple rock-paper-scissors game implemented in JavaScript that you can
 
 Directly open this link: https://sapandeep31.github.io/odin-rock-paper-scissors/   and go to step 3.
 
+OR
+
 1. Clone or download this repository to your local machine.
 2. Open the `index.html` file in your web browser.
 3. Follow the prompts in the alert boxes to choose rock, paper, or scissors:
@@ -32,7 +34,7 @@ Directly open this link: https://sapandeep31.github.io/odin-rock-paper-scissors/
 
 ## Author
 
-- [Your Name]
+- Sapandeep Singh
 
 Enjoy playing rock-paper-scissors against the computer!
 
