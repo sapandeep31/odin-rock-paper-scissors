@@ -1,36 +1,51 @@
 # Rock Paper Scissors Game
 
-This is a simple rock-paper-scissors game implemented in JavaScript that you can play in the console.
+A simple Rock Paper Scissors game built with HTML, CSS, and JavaScript. The game allows a human player to play against the computer, keeps track of the score, and has a reset button to start the game over.
 
-## How to Play
+## Features
 
-1. Clone or download this repository to your local machine.
-2. Open the `index.html` file in your web browser.
-3. Follow the prompts in the alert boxes to choose rock, paper, or scissors:
-   - Press `1` for Rock
-   - Press `2` for Paper
-   - Press `3` for Scissors
-4. After making your choice, the game will show the result of the round:
-   - You win if your choice beats the computer's choice.
-   - You lose if the computer's choice beats your choice.
-   - It's a tie if both choices are the same.
-5. The game will keep track of your score against the computer's score.
-6. After each round, you will have the option to play again.
-7. The game will display the final score and announce the overall winner at the end.
+- Play Rock, Paper, Scissors against the computer.
+- Keeps track of the score between the human player and the computer.
+- Displays the result of each round.
+- Reset button to reset the score and start the game over.
 
-## Technologies Used
+## Live Demo
 
-- HTML
-- JavaScript
+Check out the live demo [here](#).
 
-## Files Included
+## Screenshots
 
-- `index.html`: HTML file containing the script to run the game.
-- `README.md`: This file, containing instructions and information about the project.
+![Rock Paper Scissors Game](screenshot.png)
 
-## Author
+## Getting Started
 
-- Sapandeep Singh
+These instructions will get you a copy of the project up and running on your local machine for development and testing purposes.
 
-Enjoy playing rock-paper-scissors against the computer!
+### Prerequisites
 
+You will need a web browser to run this game. Any modern browser will work.
+
+### Installation
+
+1. Clone the repository:
+git clone https://github.com/sapandeep31/rock-paper-scissors
+Navigate to the project directory:
+cd rock-paper-scissors
+Open the index.html file in your web browser:
+open index.html
+Usage
+Click on one of the buttons (Rock, Paper, or Scissors) to make your choice.
+The result of the round will be displayed, along with the updated score.
+Click the "Reset Game" button to reset the scores and start a new game.
+Built With
+HTML
+CSS
+JavaScript
+Contributing
+Feel free to fork this repository and submit pull requests. If you find any issues, please open an issue on the repository.
+
+License
+This project is licensed under the MIT License - see the LICENSE file for details.
+
+Acknowledgments
+Background image from iStock.
