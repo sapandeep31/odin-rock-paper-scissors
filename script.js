@@ -1,22 +1,34 @@
 const ch = ["rock", "paper", "scissors"];
 let humanScore = 0;
 let computerScore = 0;
+let flag = 1;
 
-function getComputerChoice() {
+function getComputerChoice1() {
     let computerChoice = Math.floor(Math.random() * ch.length);
     return ch[computerChoice];
 }
 
-function getHumanChoice() {
-    let humanChoice = parseInt(prompt("\nPress 1 for Rock \nPress 2 for Paper \nPress 3 for Scissors.")) - 1;
-    while (humanChoice < 0 || humanChoice >= ch.length || isNaN(humanChoice)) {
-        alert("Invalid choice. Please enter 1, 2, or 3.");
-        humanChoice = parseInt(prompt("\nPress 1 for Rock \nPress 2 for Paper \nPress 3 for Scissors.")) - 1;
+function getComputerChoice2(humanChoiceIndex) {
+    let computerChoice;
+    if (humanChoiceIndex == 0) {
+        computerChoice = 1; // paper beats rock
+    } else if (humanChoiceIndex == 1) {
+        computerChoice = 2; // scissors beats paper
+    } else {
+        computerChoice = 0; // rock beats scissors
     }
-    return ch[humanChoice];
+    return ch[computerChoice];
 }
 
-function playRound(computerChoice, humanChoice) {
+function playRound(humanChoice) {
+    const humanChoiceIndex = ch.indexOf(humanChoice);
+    let computerChoice;
+    if (flag == 0) {
+        computerChoice = getComputerChoice2(humanChoiceIndex);
+    } else {
+        computerChoice = getComputerChoice1();
+    }
+    
     if (computerChoice === humanChoice) {
         return "It's a tie!";
     } else if (
@@ -32,23 +44,45 @@ function playRound(computerChoice, humanChoice) {
     }
 }
 
-function game() {
-    let playAgain = true;
-    while (playAgain) {
-        const computerChoice = getComputerChoice();
-        const humanChoice = getHumanChoice();
-        alert(playRound(computerChoice, humanChoice));
-        alert(`Score: Human ${humanScore} - ${computerScore} Computer`);
-        playAgain = confirm("Do you want to play again?");
-    }
-    alert(`Final Score: Human ${humanScore} - ${computerScore} Computer`);
-    if (humanScore > computerScore) {
-        alert("Congratulations! You are the overall winner!");
-    } else if (humanScore < computerScore) {
-        alert("Sorry! The computer is the overall winner!");
-    } else {
-        alert("It's an overall tie!");
-    }
+function updateScore() {
+    document.getElementById('score').textContent = `Score: Human ${humanScore} - ${computerScore} Computer`;
 }
 
-game();
+function updateResult(result) {
+    document.getElementById('result-text').textContent = result;
+}
+
+function resetGame() {
+    if(flag==0){
+        flag=1;
+    }
+    else{
+        flag=0;
+    }
+    humanScore = 0;
+    computerScore = 0;
+    updateScore();
+    updateResult("Make your choice!");
+}
+
+document.getElementById('rock').addEventListener('click', function() {
+    const result = playRound('rock');
+    updateResult(result);
+    updateScore();
+});
+
+document.getElementById('paper').addEventListener('click', function() {
+    const result = playRound('paper');
+    updateResult(result);
+    updateScore();
+});
+
+document.getElementById('scissors').addEventListener('click', function() {
+    const result = playRound('scissors');
+    updateResult(result);
+    updateScore();
+});
+
+document.getElementById('reset').addEventListener('click', resetGame);
+
+resetGame(); // Initialize game state
