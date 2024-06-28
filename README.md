@@ -11,7 +11,7 @@ A simple Rock Paper Scissors game built with HTML, CSS, and JavaScript. The game
 
 ## Live Demo
 
-Check out the live demo [here](#).
+Check out the live demo [[here](https://sapandeep31.github.io/odin-rock-paper-scissors/)](#).
 
 ## Screenshots
 
