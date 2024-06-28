@@ -15,7 +15,7 @@ Check out the live demo [here](#).
 
 ## Screenshots
 
-![Rock Paper Scissors Game](screenshot.png)
+![Rock Paper Scissors Game](image.png)
 
 ## Getting Started
 
